@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | The Web Development Studios</title>
+
+    <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="page-transition.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<section class ="header">
+
+    <div class="logo">
+        <a href="index.html">The Web Development Studios</a>
+    </div>
+
+    <button class="menu-btn" type="button">☰</button>
+
+
+<nav id="navMenu" class="neon-nav">
+
+    <a href="index.html#home"
+       class="neon-btn orange active">
+        <span>⌂</span>
+        <small>Home</small>
+    </a>
+
+    <a href="about.html"
+       class="neon-btn purple">
+        <span>✧</span>
+        <small>About</small>
+    </a>
+
+    <a href="service.html"
+       class="neon-btn yellow">
+        <span>▤</span>
+        <small>Services</small>
+    </a>
+
+    <a href="pricing.html"
+       class="neon-btn green">
+        <span>◇</span>
+        <small>Pricing</small>
+    </a>
+
+    <a href="contact.html"
+       class="neon-btn pink">
+        <span>✉</span>
+        <small>Contact</small>
+    </a>
+
+</nav>
+
+
+
+<!-- CONTACT HERO -->
+<section class="contact-hero">
+
+    <div class="contact-hero-content">
+
+        <span>GET IN TOUCH</span>
+
+        <h1>
+            Let's Build Your
+            <strong>Digital Future</strong>
+        </h1>
+
+        <p>
+            Have a website idea, business project, or web application
+            in mind? Tell us what you need and let's discuss your project.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+
+    <div class="contact-container">
+
+        <!-- LEFT SIDE -->
+        <div class="contact-info">
+
+            <span class="section-label">CONTACT US</span>
+
+            <h2>
+                Tell Us About Your Project
+            </h2>
+
+            <p>
+                Whether you need a new website, an existing website
+                redesigned, or a custom web application, we're ready
+                to help.
+            </p>
+
+
+            <div class="contact-info-box">
+
+                <div class="contact-item">
+                    <div class="contact-icon">✉</div>
+
+                    <div>
+                        <h3>Email</h3>
+                        <p>your@email.com</p>
+                    </div>
+                </div>
+
+
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+
+                    <div>
+                        <h3>Phone</h3>
+                        <p>+91 XXXXX XXXXX</p>
+                    </div>
+                </div>
+
+
+                <div class="contact-item">
+                    <div class="contact-icon">🌐</div>
+
+                    <div>
+                        <h3>Services</h3>
+                        <p>Websites • Web Apps • E-Commerce</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORM -->
+        <div class="contact-form-box">
+
+            <h2>Start Your Project</h2>
+
+            <p>
+                Fill out the form and send us your requirements.
+            </p>
+
+            <form
+                id="contactForm"
+                action="https://formspree.io/f/YOUR_FORM_ID"
+                method="POST"
+            >
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="business">Business</label>
+
+                        <input
+                            type="text"
+                            id="business"
+                            name="business"
+                            placeholder="Business name"
+                        >
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="service">
+                        What do you need?
+                    </label>
+
+                    <select id="service" name="service">
+
+                        <option value="">
+                            Select a service
+                        </option>
+
+                        <option value="business-website">
+                            Business Website
+                        </option>
+
+                        <option value="web-application">
+                            Web Application
+                        </option>
+
+                        <option value="ecommerce">
+                            E-Commerce Website
+                        </option>
+
+                        <option value="website-redesign">
+                            Website Redesign
+                        </option>
+
+                        <option value="custom">
+                            Custom Development
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Project Details
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Tell us about your project..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- SPAM PROTECTION -->
+                <input
+                    type="text"
+                    name="_gotcha"
+                    tabindex="-1"
+                    autocomplete="off"
+                    class="spam-field"
+                    aria-hidden="true"
+                >
+
+
+                <button
+                    type="submit"
+                    id="submitButton"
+                >
+
+                    <span id="buttonText">
+                        Send Message
+                    </span>
+
+                    <span
+                        id="loadingText"
+                        style="display:none;"
+                    >
+                        Sending...
+                    </span>
+
+                </button>
+
+
+                <div
+                    id="successMessage"
+                    class="form-message success-message"
+                    style="display:none;"
+                >
+                    ✓ Message Sent Successfully!
+                    <br>
+                    <small>
+                        Thank you for contacting The Web Development Studios.
+                    </small>
+                </div>
+
+
+                <div
+                    id="errorMessage"
+                    class="form-message error-message"
+                    style="display:none;"
+                >
+                    ✕ Something went wrong.
+                    <br>
+                    <small>
+                        Please try again.
+                    </small>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="contact-cta">
+
+    <h2>Have an idea?</h2>
+
+    <p>
+        Let's turn your idea into a professional digital experience.
+    </p>
+
+    <a href="pricing.html">
+        View Our Pricing
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <h3>The Web Development Studios</h3>
+
+    <p>
+        Building professional digital experiences for modern businesses.
+    </p>
+
+    <div class="footer-links">
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="service.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 The Web Development Studios. All rights reserved.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+<script src="page-transition.js"></script>
+</body>
+</html>

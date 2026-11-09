@@ -1,0 +1,3237 @@
+/* =========================================
+   THE WEB DEVELOPMENT STUDIOS
+   WEBSITE DEVELOPMENT SERVICE PAGE
+   PART 1: FOUNDATION, NAVIGATION & HERO
+========================================= */
+
+
+/* =========================================
+   1. COLOUR VARIABLES
+========================================= */
+
+:root {
+    --ink: #14211f;
+    --muted: #63716d;
+    --paper: #f7f8f4;
+    --white: #ffffff;
+
+    --blue: #2563eb;
+    --light-blue: #dbeafe;
+
+    --line: #e1e7df;
+    --dark: #13231f;
+
+    --radius: 22px;
+    --shadow: 0 24px 70px rgba(18, 42, 33, .10);
+
+    --blue-dark: #1d4ed8;
+    --blue-soft: #eff6ff;
+    --green-soft: #eaf5ed;
+
+    --transition: 0.3s ease;
+}
+
+
+/* =========================================
+   2. RESET & GLOBAL STYLES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: min(1180px, 90%);
+    margin-inline: auto;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+.text-highlight {
+    color: var(--blue);
+}
+
+::selection {
+    background: var(--light-blue);
+    color: var(--dark);
+}
+
+
+/* =========================================
+   3. ACCESSIBILITY
+========================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 4px;
+}
+
+button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   4. HEADER
+========================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+
+    background: rgba(247, 248, 244, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid rgba(225, 231, 223, 0.8);
+
+    transition:
+        box-shadow var(--transition),
+        background var(--transition);
+}
+
+.nav-container {
+    min-height: 86px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================
+   5. BRAND LOGO
+========================================= */
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.brand-icon {
+    width: 48px;
+    height: 48px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--blue);
+    color: var(--white);
+
+    font-size: 27px;
+    font-weight: 800;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.20);
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.35;
+}
+
+.brand-text strong {
+    color: var(--ink);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.brand-text > span {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   6. DESKTOP NAVIGATION
+========================================= */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-link {
+    position: relative;
+
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: color var(--transition);
+}
+
+.nav-link::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--blue);
+    border-radius: 10px;
+
+    transition: width var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--blue);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   7. NAVIGATION CTA
+========================================= */
+
+.nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 12px 19px;
+
+    background: var(--blue);
+    color: var(--white);
+
+    border: 1px solid var(--blue);
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        background var(--transition),
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.nav-cta:hover {
+    background: var(--blue-dark);
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.20);
+}
+
+.nav-cta span {
+    font-size: 17px;
+}
+
+
+/* =========================================
+   8. MOBILE MENU BUTTON
+========================================= */
+
+.menu-toggle {
+    display: none;
+
+    width: 46px;
+    height: 46px;
+
+    padding: 11px;
+
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    margin: 5px 0;
+
+    background: var(--ink);
+    border-radius: 5px;
+
+    transition:
+        transform var(--transition),
+        opacity var(--transition);
+}
+
+.menu-toggle.is-active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.is-active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.is-active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* =========================================
+   9. HERO SECTION
+========================================= */
+
+.hero-section {
+    position: relative;
+    isolation: isolate;
+
+    padding: 105px 0 100px;
+
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(219, 234, 254, 0.72),
+            transparent 34%
+        ),
+        var(--paper);
+
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 0.95fr);
+
+    align-items: center;
+    gap: 65px;
+}
+
+
+/* =========================================
+   10. EYEBROW LABELS
+========================================= */
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 24px;
+
+    color: var(--blue);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+
+    background: #22a06b;
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 5px rgba(34, 160, 107, 0.12);
+}
+
+
+/* =========================================
+   11. HERO TEXT
+========================================= */
+
+.hero-content h1 {
+    max-width: 650px;
+
+    margin-bottom: 24px;
+
+    color: var(--ink);
+
+    font-size: clamp(38px, 5vw, 66px);
+    font-weight: 800;
+
+    line-height: 1.12;
+    letter-spacing: -2.3px;
+}
+
+.hero-content h1 .text-highlight {
+    display: inline;
+}
+
+.hero-description {
+    max-width: 570px;
+
+    margin-bottom: 32px;
+
+    color: var(--muted);
+
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   12. BUTTONS
+========================================= */
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 35px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-height: 52px;
+    padding: 14px 23px;
+
+    border: 1px solid transparent;
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.btn span {
+    font-size: 17px;
+}
+
+.btn-primary {
+    background: var(--blue);
+    color: var(--white);
+    border-color: var(--blue);
+
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+}
+
+.btn-primary:hover {
+    background: var(--blue-dark);
+    border-color: var(--blue-dark);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 14px 28px rgba(37, 99, 235, 0.20);
+}
+
+.btn-secondary {
+    background: var(--white);
+    color: var(--ink);
+    border-color: var(--line);
+}
+
+.btn-secondary:hover {
+    color: var(--blue);
+    border-color: var(--blue);
+
+    transform: translateY(-3px);
+}
+
+.btn-light {
+    background: var(--white);
+    color: var(--dark);
+    border-color: var(--white);
+}
+
+.btn-light:hover {
+    background: var(--light-blue);
+    border-color: var(--light-blue);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   13. HERO TRUST ITEMS
+========================================= */
+
+.hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 22px;
+}
+
+.trust-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.trust-icon {
+    display: grid;
+    place-items: center;
+
+    width: 20px;
+    height: 20px;
+
+    background: var(--green-soft);
+    color: #18794e;
+
+    border-radius: 50%;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   14. HERO VISUAL
+========================================= */
+
+.hero-visual {
+    position: relative;
+
+    min-width: 0;
+    padding: 35px 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visual-decoration {
+    position: absolute;
+    z-index: -1;
+
+    border-radius: 50%;
+}
+
+.decoration-one {
+    width: 300px;
+    height: 300px;
+
+    top: 0;
+    right: 0;
+
+    background: rgba(219, 234, 254, 0.75);
+}
+
+.decoration-two {
+    width: 190px;
+    height: 190px;
+
+    bottom: 0;
+    left: 0;
+
+    background: rgba(234, 245, 237, 0.95);
+}
+
+
+/* =========================================
+   15. WEBSITE PREVIEW
+========================================= */
+
+.website-preview {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 490px;
+
+    overflow: hidden;
+
+    background: var(--white);
+
+    border: 1px solid rgba(225, 231, 223, 0.95);
+    border-radius: 19px;
+
+    box-shadow: 0 30px 80px rgba(18, 42, 33, 0.14);
+
+    transform: rotate(-2deg);
+
+    transition: transform 0.5s ease;
+}
+
+.website-preview:hover {
+    transform: rotate(0deg) translateY(-5px);
+}
+
+
+/* =========================================
+   16. PREVIEW TOP BAR
+========================================= */
+
+.preview-topbar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    min-height: 48px;
+    padding: 0 18px;
+
+    background: #f8fafc;
+    border-bottom: 1px solid var(--line);
+}
+
+.preview-dots {
+    display: flex;
+    gap: 5px;
+}
+
+.preview-dots span {
+    width: 8px;
+    height: 8px;
+
+    background: #d0d8d5;
+    border-radius: 50%;
+}
+
+.preview-dots span:first-child {
+    background: #f28b82;
+}
+
+.preview-dots span:nth-child(2) {
+    background: #fbbc04;
+}
+
+.preview-dots span:nth-child(3) {
+    background: #81c995;
+}
+
+.preview-address {
+    flex: 1;
+
+    padding: 5px 12px;
+
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 7px;
+
+    color: var(--muted);
+    font-size: 10px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   17. PREVIEW CONTENT
+========================================= */
+
+.preview-content {
+    padding: 25px;
+}
+
+.preview-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+.preview-logo {
+    color: var(--dark);
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.preview-menu {
+    display: flex;
+    gap: 4px;
+}
+
+.preview-menu span {
+    width: 5px;
+    height: 5px;
+
+    background: var(--blue);
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   18. PREVIEW HERO CONTENT
+========================================= */
+
+.preview-hero {
+    padding: 27px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #ffffff 75%
+        );
+
+    border: 1px solid #e5edff;
+    border-radius: 15px;
+}
+
+.preview-label {
+    display: inline-block;
+
+    margin-bottom: 13px;
+
+    color: var(--blue);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.preview-hero h2 {
+    margin-bottom: 12px;
+
+    color: var(--ink);
+
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.8px;
+}
+
+.preview-hero h2 span {
+    display: block;
+    color: var(--blue);
+}
+
+.preview-hero p {
+    margin-bottom: 20px;
+
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.preview-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 14px;
+
+    background: var(--blue);
+    color: var(--white);
+
+    border-radius: 8px;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   19. PREVIEW STATS
+========================================= */
+
+.preview-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.preview-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    padding: 13px 10px;
+
+    background: #f9faf8;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+.preview-stat strong {
+    color: var(--blue);
+    font-size: 19px;
+    line-height: 1.3;
+}
+
+.preview-stat span {
+    color: var(--muted);
+    font-size: 9px;
+}
+
+
+/* =========================================
+   20. FLOATING CARDS
+========================================= */
+
+.floating-card {
+    position: absolute;
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 17px;
+
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+
+    box-shadow: var(--shadow);
+}
+
+.floating-card-top {
+    top: 3px;
+    right: -5px;
+}
+
+.floating-card-bottom {
+    bottom: 0;
+    left: -10px;
+}
+
+.floating-icon {
+    display: grid;
+    place-items: center;
+
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    background: var(--light-blue);
+    color: var(--blue);
+
+    border-radius: 11px;
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.floating-card div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.floating-card strong {
+    color: var(--ink);
+    font-size: 12px;
+}
+
+.floating-card div span {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+
+/* =========================================
+   21. INTRODUCTION STRIP
+========================================= */
+
+.intro-strip {
+    padding: 25px 0;
+
+    background: var(--white);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.intro-strip-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.intro-strip-inner > p {
+    flex-shrink: 0;
+
+    color: var(--muted);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.intro-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px 25px;
+}
+
+.intro-tags span {
+    color: var(--ink);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   END OF PART 1
+   PART 2: SERVICES, BENEFITS & PROCESS
+========================================= *//* =========================================
+   PART 2: SERVICES, BENEFITS & PROCESS
+========================================= */
+
+
+/* =========================================
+   22. GENERAL SECTION STYLES
+========================================= */
+
+.section {
+    padding: 105px 0;
+}
+
+.section-heading {
+    max-width: 760px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.section-heading .eyebrow {
+    margin-bottom: 15px;
+}
+
+.section-heading h2,
+.benefits-content h2,
+.faq-intro h2,
+.contact-content h2 {
+    margin-bottom: 20px;
+
+    color: var(--ink);
+
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+}
+
+.section-heading > p,
+.benefits-description,
+.faq-intro > p,
+.contact-content > p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   23. SERVICES SECTION
+========================================= */
+
+.services-section {
+    background: var(--white);
+}
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+
+/* =========================================
+   24. SERVICE CARDS
+========================================= */
+
+.service-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-width: 0;
+    padding: 30px;
+
+    background: var(--white);
+
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+}
+
+.service-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: var(--blue);
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #c7d9ff;
+
+    box-shadow: var(--shadow);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* =========================================
+   25. SERVICE ICONS
+========================================= */
+
+.service-icon {
+    display: grid;
+    place-items: center;
+
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 23px;
+
+    border-radius: 17px;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.icon-blue {
+    color: var(--blue);
+    background: var(--light-blue);
+}
+
+.icon-green {
+    color: #18794e;
+    background: #e6f5eb;
+}
+
+.icon-purple {
+    color: #7c3aed;
+    background: #f1eafe;
+}
+
+.icon-orange {
+    color: #c2410c;
+    background: #fff0e5;
+}
+
+.icon-pink {
+    color: #be185d;
+    background: #fce7f3;
+}
+
+.icon-teal {
+    color: #0f766e;
+    background: #dff7f2;
+}
+
+
+/* =========================================
+   26. SERVICE CARD CONTENT
+========================================= */
+
+.service-number {
+    position: absolute;
+    top: 33px;
+    right: 30px;
+
+    color: #a5b2ad;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.service-card h3 {
+    margin-bottom: 13px;
+
+    color: var(--ink);
+
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.service-card > p {
+    margin-bottom: 22px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.service-card ul {
+    display: grid;
+    gap: 11px;
+
+    width: 100%;
+
+    margin-bottom: 25px;
+}
+
+.service-card li {
+    position: relative;
+
+    padding-left: 23px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.service-card li::before {
+    content: "✓";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    color: var(--blue);
+    font-weight: 800;
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: auto;
+
+    color: var(--blue);
+
+    font-size: 13px;
+    font-weight: 800;
+
+    transition:
+        gap var(--transition),
+        color var(--transition);
+}
+
+.text-link:hover {
+    gap: 13px;
+    color: var(--blue-dark);
+}
+
+
+/* =========================================
+   27. BENEFITS SECTION
+========================================= */
+
+.benefits-section {
+    background:
+        radial-gradient(
+            circle at 90% 45%,
+            rgba(219, 234, 254, 0.48),
+            transparent 32%
+        ),
+        var(--paper);
+}
+
+.benefits-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 0.9fr);
+
+    align-items: center;
+    gap: 80px;
+}
+
+.benefits-content .eyebrow {
+    margin-bottom: 17px;
+}
+
+.benefits-content h2 {
+    max-width: 560px;
+}
+
+.benefits-description {
+    margin-bottom: 32px;
+}
+
+
+/* =========================================
+   28. BENEFIT ITEMS
+========================================= */
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.benefit-check {
+    display: grid;
+    place-items: center;
+
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    background: var(--light-blue);
+    color: var(--blue);
+
+    border-radius: 50%;
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.benefit-item h3 {
+    margin-bottom: 6px;
+
+    color: var(--ink);
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.benefit-item p {
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.benefits-content > .btn {
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   29. BENEFIT VISUAL
+========================================= */
+
+.benefits-visual {
+    position: relative;
+
+    padding: 35px;
+
+    background: var(--light-blue);
+    border: 1px solid #c9ddff;
+
+    border-radius: 30px;
+}
+
+.benefit-main-card {
+    padding: 35px;
+
+    background: var(--white);
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 23px;
+
+    box-shadow: 0 25px 60px rgba(37, 99, 235, 0.09);
+}
+
+.benefit-card-label {
+    display: inline-block;
+
+    margin-bottom: 28px;
+
+    color: var(--blue);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+
+/* =========================================
+   30. GROWTH ILLUSTRATION
+========================================= */
+
+.growth-illustration {
+    display: flex;
+    align-items: flex-end;
+    gap: 13px;
+
+    height: 190px;
+
+    padding: 20px;
+
+    margin-bottom: 30px;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 38px,
+            #edf1f8 39px,
+            transparent 40px
+        );
+
+    border-bottom: 1px solid var(--line);
+    border-radius: 12px;
+}
+
+.growth-bar {
+    flex: 1;
+
+    min-width: 0;
+
+    background: linear-gradient(
+        to top,
+        var(--blue),
+        #93c5fd
+    );
+
+    border-radius: 8px 8px 2px 2px;
+
+    transition: height 0.5s ease;
+}
+
+.bar-one {
+    height: 30%;
+}
+
+.bar-two {
+    height: 45%;
+}
+
+.bar-three {
+    height: 58%;
+}
+
+.bar-four {
+    height: 76%;
+}
+
+.bar-five {
+    height: 100%;
+}
+
+.benefit-main-card h3 {
+    margin-bottom: 10px;
+
+    color: var(--ink);
+
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.benefit-main-card > p {
+    margin-bottom: 25px;
+
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   31. BENEFIT CARD FOOTER
+========================================= */
+
+.benefit-card-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.benefit-card-footer span {
+    padding: 7px 11px;
+
+    background: var(--blue-soft);
+    color: var(--blue);
+
+    border-radius: 7px;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   32. DEVELOPMENT PROCESS
+========================================= */
+
+.process-section {
+    background: var(--white);
+}
+
+.process-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* =========================================
+   33. PROCESS STEP CARDS
+========================================= */
+
+.process-step {
+    position: relative;
+
+    min-width: 0;
+    padding: 30px 24px;
+
+    background: var(--paper);
+
+    border: 1px solid var(--line);
+    border-radius: 20px;
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.process-step:hover {
+    transform: translateY(-6px);
+
+    border-color: #c7d9ff;
+
+    box-shadow: var(--shadow);
+}
+
+.process-number {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+
+    color: #b4c0bb;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.process-icon {
+    display: grid;
+    place-items: center;
+
+    width: 54px;
+    height: 54px;
+
+    margin-bottom: 25px;
+
+    background: var(--light-blue);
+    color: var(--blue);
+
+    border-radius: 15px;
+
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.process-step h3 {
+    margin-bottom: 12px;
+
+    color: var(--ink);
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.process-step p {
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   END OF PART 2
+   PART 3: PRICING, FAQ & CONTACT
+========================================= *//* =========================================
+   PART 3: PRICING, FAQ & CONTACT
+========================================= */
+
+
+/* =========================================
+   34. PRICING SECTION
+========================================= */
+
+.pricing-section {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(219, 234, 254, 0.45),
+            transparent 40%
+        ),
+        var(--paper);
+}
+
+.pricing-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    align-items: stretch;
+    gap: 24px;
+}
+
+
+/* =========================================
+   35. PRICING CARDS
+========================================= */
+
+.pricing-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    padding: 32px;
+
+    background: var(--white);
+
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.pricing-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #c7d9ff;
+
+    box-shadow: var(--shadow);
+}
+
+.pricing-featured {
+    border: 2px solid var(--blue);
+
+    box-shadow: 0 18px 50px rgba(37, 99, 235, 0.09);
+}
+
+.pricing-featured:hover {
+    border-color: var(--blue-dark);
+}
+
+
+/* =========================================
+   36. POPULAR BADGE
+========================================= */
+
+.popular-badge {
+    position: absolute;
+
+    top: 0;
+    right: 24px;
+
+    padding: 8px 13px;
+
+    background: var(--blue);
+    color: var(--white);
+
+    border-radius: 0 0 9px 9px;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   37. PRICING TEXT
+========================================= */
+
+.pricing-label {
+    margin-bottom: 15px;
+
+    color: var(--blue);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.pricing-card h3 {
+    margin-bottom: 12px;
+
+    color: var(--ink);
+
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.pricing-description {
+    min-height: 78px;
+
+    margin-bottom: 22px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.price {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    margin-bottom: 6px;
+}
+
+.price > span {
+    color: var(--ink);
+
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.price-note {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.pricing-divider {
+    height: 1px;
+
+    margin: 25px 0;
+
+    background: var(--line);
+}
+
+
+/* =========================================
+   38. PRICING FEATURES
+========================================= */
+
+.pricing-features {
+    display: grid;
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.pricing-features li {
+    color: var(--muted);
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.pricing-features li::first-letter {
+    color: var(--blue);
+}
+
+.pricing-btn {
+    width: 100%;
+    margin-top: auto;
+    text-align: center;
+}
+
+.pricing-disclaimer {
+    max-width: 760px;
+
+    margin: 30px auto 0;
+
+    color: var(--muted);
+
+    font-size: 12px;
+    line-height: 1.8;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   39. FAQ SECTION
+========================================= */
+
+.faq-section {
+    background: var(--white);
+}
+
+.faq-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.8fr)
+        minmax(0, 1.2fr);
+
+    align-items: start;
+    gap: 85px;
+}
+
+.faq-intro {
+    position: sticky;
+    top: 125px;
+}
+
+.faq-intro .eyebrow {
+    margin-bottom: 17px;
+}
+
+.faq-intro h2 {
+    font-size: clamp(32px, 3.5vw, 44px);
+}
+
+.faq-intro > p {
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   40. FAQ ITEMS
+========================================= */
+
+.faq-list {
+    display: grid;
+    gap: 14px;
+}
+
+.faq-item {
+    background: var(--paper);
+
+    border: 1px solid var(--line);
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.faq-item.is-open {
+    background: var(--white);
+    border-color: #bfd4ff;
+
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.06);
+}
+
+
+/* =========================================
+   41. FAQ QUESTIONS
+========================================= */
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    width: 100%;
+    padding: 22px;
+
+    background: transparent;
+    border: none;
+
+    color: var(--ink);
+
+    font-size: 14px;
+    font-weight: 800;
+
+    text-align: left;
+}
+
+.faq-question > span:first-child {
+    flex: 1;
+}
+
+.faq-icon {
+    display: grid;
+    place-items: center;
+
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    background: var(--light-blue);
+    color: var(--blue);
+
+    border-radius: 9px;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    transition:
+        transform var(--transition),
+        background var(--transition);
+}
+
+.faq-item.is-open .faq-icon {
+    background: var(--blue);
+    color: var(--white);
+}
+
+
+/* =========================================
+   42. FAQ ANSWERS
+========================================= */
+
+.faq-answer {
+    padding: 0 22px 22px;
+}
+
+.faq-answer p {
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   43. CONTACT SECTION
+========================================= */
+
+.contact-section {
+    background:
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(219, 234, 254, 0.48),
+            transparent 35%
+        ),
+        var(--paper);
+}
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.85fr)
+        minmax(0, 1.15fr);
+
+    align-items: start;
+    gap: 70px;
+}
+
+.contact-content {
+    padding-top: 25px;
+}
+
+.contact-content .eyebrow {
+    margin-bottom: 17px;
+}
+
+.contact-content h2 {
+    font-size: clamp(34px, 4vw, 49px);
+}
+
+.contact-content > p {
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   44. CONTACT DETAILS
+========================================= */
+
+.contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    margin-bottom: 25px;
+}
+
+.contact-detail-icon {
+    display: grid;
+    place-items: center;
+
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    background: var(--light-blue);
+    color: var(--blue);
+
+    border-radius: 14px;
+
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.contact-detail > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contact-detail strong {
+    color: var(--ink);
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.contact-detail > div > span {
+    color: var(--muted);
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   45. CONTACT NOTE
+========================================= */
+
+.contact-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    margin-top: 35px;
+    padding: 18px;
+
+    background: var(--green-soft);
+    border: 1px solid #d8ebdc;
+    border-radius: 14px;
+}
+
+.contact-note > span {
+    color: #18794e;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.contact-note p {
+    color: #456653;
+
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   46. CONTACT FORM CARD
+========================================= */
+
+.contact-form-card {
+    min-width: 0;
+    padding: 38px;
+
+    background: var(--white);
+
+    border: 1px solid var(--line);
+    border-radius: 25px;
+
+    box-shadow: var(--shadow);
+}
+
+.form-heading {
+    margin-bottom: 30px;
+}
+
+.form-heading h3 {
+    margin-bottom: 8px;
+
+    color: var(--ink);
+
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.form-heading p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* =========================================
+   47. FORM LAYOUT
+========================================= */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    min-width: 0;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    color: var(--ink);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   48. FORM INPUTS
+========================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-width: 0;
+
+    padding: 13px 15px;
+
+    background: #fbfcfa;
+    color: var(--ink);
+
+    border: 1px solid var(--line);
+    border-radius: 11px;
+
+    outline: none;
+
+    font-size: 13px;
+
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        background var(--transition);
+}
+
+.form-group input,
+.form-group select {
+    min-height: 49px;
+}
+
+.form-group textarea {
+    min-height: 140px;
+
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9aa7a1;
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+    border-color: #b9c9c0;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    background: var(--white);
+    border-color: var(--blue);
+
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.09);
+}
+
+.form-group input[aria-invalid="true"],
+.form-group select[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+    border-color: #dc2626;
+
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.07);
+}
+
+
+/* =========================================
+   49. FORM VALIDATION MESSAGES
+========================================= */
+
+.field-error {
+    min-height: 0;
+
+    color: #dc2626;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.field-error:empty {
+    display: none;
+}
+
+
+/* =========================================
+   50. SPAM PROTECTION FIELD
+========================================= */
+
+.honeypot-field {
+    position: absolute !important;
+
+    width: 1px !important;
+    height: 1px !important;
+
+    padding: 0 !important;
+    margin: -1px !important;
+
+    overflow: hidden !important;
+
+    clip: rect(0, 0, 0, 0) !important;
+    clip-path: inset(50%) !important;
+
+    white-space: nowrap !important;
+
+    border: 0 !important;
+}
+
+
+/* =========================================
+   51. SUBMIT BUTTON
+========================================= */
+
+.form-submit {
+    width: 100%;
+    min-height: 55px;
+
+    margin-top: 5px;
+}
+
+.form-submit:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   52. FORM STATUS
+========================================= */
+
+.form-status {
+    margin-top: 17px;
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.form-status:empty {
+    display: none;
+}
+
+.form-status.status-error {
+    padding: 12px;
+
+    background: #fef2f2;
+    color: #b91c1c;
+
+    border: 1px solid #fecaca;
+    border-radius: 10px;
+}
+
+.form-status.status-info {
+    padding: 12px;
+
+    background: var(--blue-soft);
+    color: #1e40af;
+
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+}
+
+.form-privacy {
+    margin-top: 17px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+    line-height: 1.8;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   END OF PART 3
+   PART 4: CTA, FOOTER & RESPONSIVENESS
+========================================= *//* =========================================
+   PART 4: CTA, FOOTER & RESPONSIVENESS
+========================================= */
+
+
+/* =========================================
+   53. FINAL CALL TO ACTION
+========================================= */
+
+.final-cta-section {
+    padding: 45px 0 90px;
+
+    background: var(--white);
+}
+
+.final-cta-card {
+    position: relative;
+    isolation: isolate;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+
+    min-height: 340px;
+
+    padding: 65px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #13231f 0%,
+            #183a35 58%,
+            #174d61 100%
+        );
+
+    border-radius: 30px;
+
+    overflow: hidden;
+}
+
+.final-cta-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 650px;
+}
+
+.final-cta-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #bfdbfe;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+.final-cta-content h2 {
+    margin-bottom: 18px;
+
+    color: var(--white);
+
+    font-size: clamp(32px, 4.5vw, 50px);
+    font-weight: 800;
+
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+}
+
+.final-cta-content h2 span {
+    display: block;
+    color: #93c5fd;
+}
+
+.final-cta-content > p {
+    max-width: 540px;
+
+    margin-bottom: 28px;
+
+    color: #d0ded8;
+
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   54. CTA DECORATION
+========================================= */
+
+.final-cta-decoration {
+    position: absolute;
+    z-index: 1;
+
+    top: 50%;
+    right: 7%;
+
+    width: 300px;
+    height: 300px;
+
+    transform: translateY(-50%);
+}
+
+.cta-circle {
+    position: absolute;
+
+    border: 1px solid rgba(219, 234, 254, 0.25);
+    border-radius: 50%;
+}
+
+.circle-one {
+    inset: 0;
+}
+
+.circle-two {
+    inset: 35px;
+}
+
+.circle-three {
+    inset: 70px;
+
+    background: rgba(219, 234, 254, 0.06);
+}
+
+.cta-symbol {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    display: grid;
+    place-items: center;
+
+    width: 105px;
+    height: 105px;
+
+    background: rgba(219, 234, 254, 0.12);
+    color: #bfdbfe;
+
+    border: 1px solid rgba(219, 234, 254, 0.3);
+    border-radius: 30px;
+
+    font-size: 60px;
+    font-weight: 800;
+
+    transform: translate(-50%, -50%) rotate(-8deg);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* =========================================
+   55. FOOTER
+========================================= */
+
+.site-footer {
+    padding: 75px 0 25px;
+
+    background: #10201d;
+    color: var(--white);
+}
+
+
+/* =========================================
+   56. FOOTER GRID
+========================================= */
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        0.8fr
+        1fr
+        1fr;
+
+    gap: 50px;
+
+    padding-bottom: 55px;
+}
+
+.footer-brand {
+    margin-bottom: 23px;
+}
+
+.footer-brand .brand-icon {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.footer-brand .brand-text strong {
+    color: var(--white);
+}
+
+.footer-brand .brand-text > span {
+    color: #a7bab1;
+}
+
+
+/* =========================================
+   57. FOOTER DESCRIPTION
+========================================= */
+
+.footer-description {
+    max-width: 310px;
+
+    color: #a7bab1;
+
+    font-size: 12px;
+    line-height: 2;
+}
+
+
+/* =========================================
+   58. FOOTER COLUMNS
+========================================= */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+.footer-column h3 {
+    margin-bottom: 9px;
+
+    color: var(--white);
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.footer-column > a {
+    color: #a7bab1;
+
+    font-size: 12px;
+
+    transition:
+        color var(--transition),
+        transform var(--transition);
+}
+
+.footer-column > a:hover {
+    color: #93c5fd;
+    transform: translateX(3px);
+}
+
+.footer-column > p {
+    color: #a7bab1;
+
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   59. FOOTER CTA
+========================================= */
+
+.footer-column .footer-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 5px;
+    padding: 10px 15px;
+
+    background: var(--blue);
+    color: var(--white);
+
+    border-radius: 9px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition:
+        background var(--transition),
+        transform var(--transition);
+}
+
+.footer-column .footer-cta:hover {
+    background: var(--blue-dark);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   60. FOOTER BOTTOM
+========================================= */
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(225, 231, 223, 0.15);
+}
+
+.footer-bottom p {
+    color: #a7bab1;
+
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.back-to-top {
+    flex-shrink: 0;
+
+    color: #bfdbfe;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    transition: color var(--transition);
+}
+
+.back-to-top:hover {
+    color: var(--white);
+}
+
+
+/* =========================================
+   61. TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .nav-menu {
+        gap: 18px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+    .nav-cta {
+        padding: 11px 14px;
+        font-size: 12px;
+    }
+
+    .hero-grid {
+        gap: 35px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(38px, 5vw, 54px);
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-trust {
+        gap: 12px;
+    }
+
+    .trust-item {
+        font-size: 11px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .benefits-grid {
+        gap: 45px;
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pricing-grid {
+        gap: 16px;
+    }
+
+    .pricing-card {
+        padding: 25px;
+    }
+
+    .faq-layout {
+        gap: 45px;
+    }
+
+    .contact-grid {
+        gap: 40px;
+    }
+
+    .contact-form-card {
+        padding: 28px;
+    }
+
+    .footer-grid {
+        gap: 30px;
+    }
+
+    .final-cta-decoration {
+        right: 2%;
+        opacity: 0.7;
+    }
+
+}
+
+
+/* =========================================
+   62. MOBILE NAVIGATION
+========================================= */
+
+@media (max-width: 800px) {
+
+    .nav-container {
+        min-height: 76px;
+    }
+
+    .menu-toggle {
+        display: block;
+        flex-shrink: 0;
+    }
+
+    .nav-menu {
+        position: absolute;
+
+        top: calc(100% + 1px);
+        left: 0;
+        right: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+
+        padding: 12px 5% 20px;
+
+        background: var(--white);
+
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 18px 35px rgba(18, 42, 33, 0.09);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform: translateY(-8px);
+
+        transition:
+            opacity var(--transition),
+            visibility var(--transition),
+            transform var(--transition);
+    }
+
+    .nav-menu.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        transform: translateY(0);
+    }
+
+    .nav-link {
+        display: block;
+
+        padding: 14px 5px;
+
+        border-bottom: 1px solid var(--line);
+
+        font-size: 14px;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .nav-cta {
+        justify-content: center;
+
+        margin-top: 15px;
+        padding: 14px;
+    }
+
+    .hero-section {
+        padding: 75px 0;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .hero-content h1 {
+        max-width: 650px;
+
+        font-size: clamp(38px, 7vw, 58px);
+    }
+
+    .hero-visual {
+        width: 100%;
+        max-width: 600px;
+
+        margin-inline: auto;
+    }
+
+    .website-preview {
+        max-width: 470px;
+    }
+
+    .intro-strip-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .intro-tags {
+        justify-content: flex-start;
+        gap: 12px 20px;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .benefits-visual {
+        max-width: 570px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 520px;
+        margin-inline: auto;
+
+        gap: 24px;
+    }
+
+    .pricing-description {
+        min-height: 0;
+    }
+
+    .faq-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .faq-intro {
+        position: static;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-content {
+        padding-top: 0;
+    }
+
+    .contact-form-card {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .final-cta-section {
+        padding: 25px 0 70px;
+    }
+
+    .final-cta-card {
+        padding: 45px 35px;
+    }
+
+    .final-cta-decoration {
+        right: -80px;
+        opacity: 0.35;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px 30px;
+    }
+
+}
+
+
+/* =========================================
+   63. SMALL MOBILE DEVICES
+========================================= */
+
+@media (max-width: 520px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .brand {
+        gap: 9px;
+    }
+
+    .brand-icon {
+        width: 41px;
+        height: 41px;
+
+        border-radius: 12px;
+
+        font-size: 23px;
+    }
+
+    .brand-text strong {
+        font-size: 15px;
+    }
+
+    .brand-text > span {
+        font-size: 10px;
+    }
+
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(34px, 9vw, 44px);
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .hero-trust {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .hero-visual {
+        padding: 30px 0;
+    }
+
+    .website-preview {
+        border-radius: 14px;
+        transform: none;
+    }
+
+    .website-preview:hover {
+        transform: translateY(-3px);
+    }
+
+    .preview-content {
+        padding: 15px;
+    }
+
+    .preview-nav {
+        margin-bottom: 20px;
+    }
+
+    .preview-hero {
+        padding: 20px 15px;
+    }
+
+    .preview-hero h2 {
+        font-size: 23px;
+    }
+
+    .preview-stats {
+        gap: 6px;
+        margin-top: 12px;
+    }
+
+    .preview-stat {
+        padding: 9px 6px;
+    }
+
+    .preview-stat strong {
+        font-size: 16px;
+    }
+
+    .preview-stat span {
+        font-size: 8px;
+    }
+
+    .floating-card {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .floating-card-top {
+        right: -3px;
+    }
+
+    .floating-card-bottom {
+        left: -3px;
+    }
+
+    .floating-icon {
+        width: 30px;
+        height: 30px;
+
+        border-radius: 8px;
+
+        font-size: 16px;
+    }
+
+    .floating-card strong {
+        font-size: 10px;
+    }
+
+    .floating-card div span {
+        font-size: 8px;
+    }
+
+    .intro-tags {
+        gap: 10px;
+    }
+
+    .intro-tags span {
+        padding: 7px 10px;
+
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+
+        font-size: 10px;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2,
+    .benefits-content h2,
+    .faq-intro h2,
+    .contact-content h2 {
+        font-size: 32px;
+        letter-spacing: -1px;
+    }
+
+    .section-heading > p,
+    .benefits-description,
+    .faq-intro > p,
+    .contact-content > p {
+        font-size: 13px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .service-card {
+        padding: 25px;
+    }
+
+    .service-card h3 {
+        font-size: 19px;
+    }
+
+    .benefits-visual {
+        padding: 15px;
+        border-radius: 22px;
+    }
+
+    .benefit-main-card {
+        padding: 22px;
+        border-radius: 17px;
+    }
+
+    .growth-illustration {
+        height: 150px;
+        gap: 8px;
+        padding: 13px;
+    }
+
+    .benefit-main-card h3 {
+        font-size: 19px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .process-step {
+        padding: 25px;
+    }
+
+    .pricing-card {
+        padding: 25px;
+    }
+
+    .faq-question {
+        padding: 17px;
+        gap: 12px;
+
+        font-size: 12px;
+    }
+
+    .faq-answer {
+        padding: 0 17px 18px;
+    }
+
+    .faq-answer p {
+        font-size: 12px;
+    }
+
+    .contact-form-card {
+        padding: 22px 17px;
+
+        border-radius: 19px;
+    }
+
+    .form-heading h3 {
+        font-size: 23px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-group {
+        margin-bottom: 17px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px;
+    }
+
+    .final-cta-section {
+        padding: 15px 0 55px;
+    }
+
+    .final-cta-card {
+        min-height: 0;
+
+        padding: 38px 24px;
+
+        border-radius: 23px;
+    }
+
+    .final-cta-content h2 {
+        font-size: 32px;
+        letter-spacing: -1px;
+    }
+
+    .final-cta-content > p {
+        font-size: 13px;
+    }
+
+    .final-cta-decoration {
+        top: auto;
+        right: -130px;
+        bottom: -110px;
+
+        transform: none;
+        opacity: 0.18;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .site-footer {
+        padding-top: 55px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+}
+
+
+/* =========================================
+   64. EXTRA SMALL SCREENS
+========================================= */
+
+@media (max-width: 360px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .brand-text strong {
+        font-size: 13px;
+    }
+
+    .brand-text > span {
+        font-size: 9px;
+    }
+
+    .brand-icon {
+        width: 36px;
+        height: 36px;
+
+        font-size: 20px;
+    }
+
+    .menu-toggle {
+        width: 41px;
+        height: 41px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .eyebrow {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .preview-hero h2 {
+        font-size: 20px;
+    }
+
+    .floating-card {
+        max-width: 190px;
+    }
+
+    .btn {
+        padding: 13px 15px;
+        font-size: 12px;
+    }
+
+    .service-card,
+    .pricing-card {
+        padding: 21px;
+    }
+
+    .contact-form-card {
+        padding: 19px 14px;
+    }
+
+}
+
+
+/* =========================================
+   65. REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+
+/* =========================================
+   END OF WEBSITE DEVELOPMENT CSS
+========================================= */

@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Business Website Development Services | The Web Development Studios</title>
+
+    <meta name="description"
+          content="Professional business website development, corporate websites, education websites, healthcare websites, real estate websites, and custom web applications.">
+
+    <meta name="author" content="The Web Development Studios">
+
+    <link rel="stylesheet" href="Business-website.css">
+
+    <script src="Business-website.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="#home" class="logo">
+                The Web
+                <span>Development Studios</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="navLinks"
+                aria-label="Open navigation menu">
+                ☰ Menu
+            </button>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#additional">Other Services</a></li>
+                    <li><a href="#process">Our Process</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+
+            <div class="container hero-grid">
+
+                <div>
+                    <span class="eyebrow">
+                        Professional Web Development
+                    </span>
+
+                    <h1>
+                        Build Your Digital Presence.
+                        <span>Grow Your Business.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        We design and develop modern, responsive,
+                        and secure websites for businesses, startups,
+                        professionals, and organizations.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#services" class="btn btn-primary">
+                            Explore Our Services →
+                        </a>
+
+                        <a href="#contact" class="btn btn-outline">
+                            Contact Us
+                        </a>
+
+                    </div>
+
+                    <div class="hero-points">
+                        <span>Responsive Design</span>
+                        <span>Custom Development</span>
+                        <span>Scalable Solutions</span>
+                    </div>
+                </div>
+
+
+                <div class="hero-card">
+
+                    <h3>What We Build</h3>
+
+                    <div class="hero-service">
+                        <div class="service-icon">🏢</div>
+
+                        <div>
+                            <h4>Business Websites</h4>
+                            <p>Professional websites for companies.</p>
+                        </div>
+                    </div>
+
+                    <div class="hero-service">
+                        <div class="service-icon">💻</div>
+
+                        <div>
+                            <h4>Web Applications</h4>
+                            <p>Custom digital business solutions.</p>
+                        </div>
+                    </div>
+
+                    <div class="hero-service">
+                        <div class="service-icon">⚙️</div>
+
+                        <div>
+                            <h4>Backend & Integrations</h4>
+                            <p>Databases, APIs, and authentication.</p>
+                        </div>
+                    </div>
+
+                    <div class="hero-service">
+                        <div class="service-icon">🔒</div>
+
+                        <div>
+                            <h4>Maintenance & Security</h4>
+                            <p>Ongoing improvements and support.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Main Services -->
+        <section class="section" id="services">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">Our Services</span>
+
+                    <h2>Website Development for Every Business</h2>
+
+                    <p>
+                        Choose a service category to explore
+                        our website development solutions.
+                    </p>
+                </div>
+
+                <div class="service-tools">
+
+                    <input
+                        type="search"
+                        id="serviceSearch"
+                        placeholder="Search services..."
+                        aria-label="Search services">
+
+                </div>
+
+
+                <div class="service-grid" id="serviceGrid">
+
+                    <!-- 1. Corporate Websites -->
+                    <article
+                        class="service-card"
+                        data-search="company corporate startup small business portfolio franchise agency consulting industrial">
+
+                        <div class="service-icon">🏢</div>
+
+                        <h3>Company & Corporate Websites</h3>
+
+                        <p>
+                            Establish your company's online presence
+                            with a professional website.
+                        </p>
+
+                        <ul>
+                            <li>Corporate websites</li>
+                            <li>Startup websites</li>
+                            <li>Company profiles</li>
+                            <li>Agency websites</li>
+                            <li>Industrial company websites</li>
+                        </ul>
+
+                        <a href="#contact"
+                           class="service-link"
+                           data-service="Company & Corporate Websites">
+                            Request This Service →
+                        </a>
+
+                    </article>
+
+
+                    <!-- 2. Service-Based Websites -->
+                    <article
+                        class="service-card"
+                        data-search="service digital marketing web development graphic design seo software IT support photography video cleaning repair">
+
+                        <div class="service-icon">🛠️</div>
+
+                        <h3>Service-Based Business Websites</h3>
+
+                        <p>
+                            Help customers understand your services
+                            and contact your business.
+                        </p>
+
+                        <ul>
+                            <li>Digital marketing websites</li>
+                            <li>Web development websites</li>
+                            <li>Design portfolios</li>
+                            <li>IT support websites</li>
+                            <li>Home service websites</li>
+                        </ul>
+
+                        <a href="#contact"
+                           class="service-link"
+                           data-service="Service-Based Business Websites">
+                            Request This Service →
+                        </a>
+
+                    </article>
+
+
+                    <!-- 3. Education Websites -->
+                    <article
+                        class="service-card"
+                        data-search="education school college university course coaching tutoring learning student examination quiz">
+
+                        <div class="service-icon">🎓</div>
+
+                        <h3>Education & E-learning Websites</h3>
+
+                        <p>
+                            Digital platforms for schools,
+                            colleges, tutors, and educational businesses.
+                        </p>
+
+                        <ul>
+                            <li>School websites</li>
+                            <li>College websites</li>
+                            <li>Online course platforms</li>
+                            <li>Student portals</li>
+                            <li>Examination platforms</li>
+                        </ul>
+
+                        <a href="#contact"
+                           class="service-link"
+                           data-service="Education & E-learning Websites">
+                            Request This Service →
+                        </a>
+
+                    </article>
+
+
+                    <!-- 4. Healthcare Websites -->
+                    <article
+                        class="service-card"
+                        data-search="healthcare hospital clinic doctor dental diagnostic laboratory medical physiotherapy patient">
+
+                        <div class="service-icon">🏥</div>
+
+                        <h3>Healthcare & Medical Websites</h3>
+
+                        <p>
+                            Help healthcare providers present
+                            their services and medical information.
+                        </p>
+
+                        <ul>
+                            <li>Hospital websites</li>
+                            <li>Clinic websites</li>
+                            <li>Doctor appointment websites</li>
+                            <li>Diagnostic laboratory websites</li>
+                            <li>Healthcare directories</li>
+                        </ul>
+
+                        <a href="#contact"
+                           class="service-link"
+                           data-service="Healthcare & Medical Websites">
+                            Request This Service →
+                        </a>
+
+                    </article>
+
+
+                    <!-- 5. Real Estate Websites -->
+                    <article
+                        class="service-card"
+                        data-search="real estate property rental house commercial construction architecture interior design marketplace">
+
+                        <div class="service-icon">🏘️</div>
+
+                        <h3>Real Estate & Property Websites</h3>
+
+                        <p>
+                            Showcase properties and generate
+                            enquiries from potential buyers or tenants.
+                        </p>
+
+                        <ul>
+                            <li>Property listing websites</li>
+                            <li>Real estate agency websites</li>
+                            <li>Property management portals</li>
+                            <li>Construction websites</li>
+                            <li>Architecture websites</li>
+                        </ul>
+
+                        <a href="#contact"
+                           class="service-link"
+                           data-service="Real Estate & Property Websites">
+                            Request This Service →
+                        </a>
+
+                    </article>
+
+
+                    <!-- 6. Travel Websites -->
+                    <article
+                        class="service-card"
+                        data-search="travel tourism hotel resort agency tour flight bus ticket car rental holiday homestay">
+
+                        <div class="service-icon">✈️</div>
+
+                        <h3>Travel & Hospitality Websites</h3>
+
+                        <p>
+                            Present travel services, destinations,
+                            accommodation, and booking information.
+                        </p>
+
+                        <ul>
+                            <li>Hotel websites</li>
+                            <li>Travel agency websites</li>
+                            <li>Tour booking websites</li>
+                            <li>Car rental websites</li>
+                            <li>Holiday package websites</li>
+                        </ul>
+
+                        <a href="#contact"
+                           class="service-link"
+                           data-service="Travel & Hospitality Websites">
+                            Request This Service →
+                        </a>
+
+                    </article>
+
+
+                    <!-- 7. Professional Websites -->
+                    <article
+                        class="service-card"
+                        data-search="finance accounting chartered accountant insurance loan investment legal law recruitment human resources">
+
+                        <div class="service-icon">⚖️</div>
+
+                        <h3>Finance & Professional Websites</h3>
+
+                        <p>
+                            Professional websites for consultants,
+                            accountants, legal firms, and recruiters.
+                        </p>
+
+                        <ul>
+                            <li>Accounting websites</li>
+                            <li>Financial consultancy websites</li>
+                            <li>Insurance websites</li>
+                            <li>Law firm websites</li>
+                            <li>Recruitment websites</li>
+                        </ul>
+
+                        <a href="#contact"
+                           class="service-link"
+                           data-service="Finance & Professional Websites">
+                            Request This Service →
+                        </a>
+
+                    </article>
+
+
+                    <!-- 8. Web Applications -->
+                    <article
+                        class="service-card"
+                        data-search="custom application CRM ERP project management inventory POS job portal freelancing SaaS analytics dashboard ticket support">
+
+                        <div class="service-icon">⚙️</div>
+
+                        <h3>Business Platforms & Web Applications</h3>
+
+                        <p>
+                            Custom systems to manage customers,
+                            projects, and business operations.
+                        </p>
+
+                        <ul>
+                            <li>CRM and ERP systems</li>
+                            <li>Inventory management</li>
+                            <li>Project management platforms</li>
+                            <li>SaaS platforms</li>
+                            <li>Business dashboards</li>
+                        </ul>
+
+                        <a href="#contact"
+                           class="service-link"
+                           data-service="Business Platforms & Web Applications">
+                            Request This Service →
+                        </a>
+
+                    </article>
+
+                </div>
+
+                <p id="searchMessage" class="no-results" hidden>
+                    No matching services found.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- Additional Services -->
+        <section class="section section-light" id="additional">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">More Solutions</span>
+
+                    <h2>Additional Website Services</h2>
+
+                    <p>
+                        Specialized websites for individuals,
+                        communities, and organizations.
+                    </p>
+                </div>
+
+                <div class="additional-grid">
+
+                    <article class="additional-card">
+                        <h3>Personal Portfolios</h3>
+                        <p>Showcase skills and projects.</p>
+                    </article>
+
+                    <article class="additional-card">
+                        <h3>Resume Websites</h3>
+                        <p>Present professional qualifications.</p>
+                    </article>
+
+                    <article class="additional-card">
+                        <h3>News Websites</h3>
+                        <p>Publish and organize news articles.</p>
+                    </article>
+
+                    <article class="additional-card">
+                        <h3>Blogging Platforms</h3>
+                        <p>Create and manage content.</p>
+                    </article>
+
+                    <article class="additional-card">
+                        <h3>Affiliate Websites</h3>
+                        <p>Publish reviews and affiliate content.</p>
+                    </article>
+
+                    <article class="additional-card">
+                        <h3>Event Websites</h3>
+                        <p>Promote events and registrations.</p>
+                    </article>
+
+                    <article class="additional-card">
+                        <h3>Wedding Websites</h3>
+                        <p>Present wedding planning services.</p>
+                    </article>
+
+                    <article class="additional-card">
+                        <h3>Fitness Websites</h3>
+                        <p>Promote gyms and fitness programmes.</p>
+                    </article>
+
+                    <article class="additional-card">
+                        <h3>Salon & Spa Websites</h3>
+                        <p>Present beauty and wellness services.</p>
+                    </article>
+
+                    <article class="additional-card">
+                        <h3>Automobile Websites</h3>
+                        <p>Promote vehicle and repair services.</p>
+                    </article>
+
+                    <article class="additional-card">
+                        <h3>NGO Websites</h3>
+                        <p>Share nonprofit initiatives.</p>
+                    </article>
+
+                    <article class="additional-card">
+                        <h3>Charity Websites</h3>
+                        <p>Present fundraising information.</p>
+                    </article>
+
+                    <article class="additional-card">
+                        <h3>Membership Websites</h3>
+                        <p>Provide member-only content.</p>
+                    </article>
+
+                    <article class="additional-card">
+                        <h3>Community Forums</h3>
+                        <p>Support online discussions.</p>
+                    </article>
+
+                    <article class="additional-card">
+                        <h3>Social Platforms</h3>
+                        <p>Connect users through communities.</p>
+                    </article>
+
+                    <article class="additional-card">
+                        <h3>Classified Websites</h3>
+                        <p>Publish categorized advertisements.</p>
+                    </article>
+
+                    <article class="additional-card">
+                        <h3>Auction Platforms</h3>
+                        <p>Develop online bidding systems.</p>
+                    </article>
+
+                    <article class="additional-card">
+                        <h3>Appointment Systems</h3>
+                        <p>Allow customers to request appointments.</p>
+                    </article>
+
+                    <article class="additional-card">
+                        <h3>Business Directories</h3>
+                        <p>Help users discover businesses.</p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Development Process -->
+        <section class="section" id="process">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">How We Work</span>
+
+                    <h2>Our Development Process</h2>
+
+                    <p>           A structured process for planning,
+                        building, testing, and launching websites.
+                    </p>
+                </div>
+
+                <div class="process-grid">
+
+                    <article class="process-card">
+                        <div class="process-number">01</div>
+                        <h3>Requirement Analysis</h3>
+                        <p>Understand goals and required features.</p>
+                    </article>
+
+                    <article class="process-card">
+                        <div class="process-number">02</div>
+                        <h3>Planning & Design</h3>
+                        <p>Plan layouts and user experience.</p>
+                    </article>
+
+                    <article class="process-card">
+                        <div class="process-number">03</div>
+                        <h3>Frontend Development</h3>
+                        <p>Build the responsive interface.</p>
+                    </article>
+
+                    <article class="process-card">
+                        <div class="process-number">04</div>
+                        <h3>Backend Development</h3>
+                        <p>Build APIs, databases, and server logic.</p>
+                    </article>
+
+                    <article class="process-card">
+                        <div class="process-number">05</div>
+                        <h3>Testing & Security</h3>
+                        <p>Test functionality and security controls.</p>
+                    </article>
+
+                    <article class="process-card">
+                        <div class="process-number">06</div>
+                        <h3>Deployment</h3>
+                        <p>Configure hosting and publish the website.</p>
+                    </article>
+
+                    <article class="process-card">
+                        <div class="process-number">07</div>
+                        <h3>Maintenance</h3>
+                        <p>Provide updates and technical support.</p>
+                    </article>
+
+                    <article class="process-card">
+                        <div class="process-number">08</div>
+                        <h3>Future Improvements</h3>
+                        <p>Extend features as requirements evolve.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Why Choose Us -->
+        <section class="section section-light">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">Our Approach</span>
+
+                    <h2>Why Choose The Web Development Studios?</h2>
+                </div>
+
+                <div class="why-grid">
+
+                    <article class="why-card">
+                        <h3>Custom Development</h3>
+                        <p>Solutions tailored to project requirements.</p>
+                    </article>
+
+                    <article class="why-card">
+                        <h3>Responsive Design</h3>
+                        <p>Layouts for mobile, tablet, and desktop.</p>
+                    </article>
+
+                    <article class="why-card">
+                        <h3>Scalable Architecture</h3>
+                        <p>Systems designed for future improvements.</p>
+                    </article>
+
+                    <article class="why-card">
+                        <h3>Security-Conscious Development</h3>
+                        <p>Appropriate safeguards for business data.</p>
+                    </article>
+
+                    <article class="why-card">
+                        <h3>SEO-Friendly Structure</h3>
+                        <p>Clear structure and useful metadata.</p>
+                    </article>
+
+                    <article class="why-card">
+                        <h3>Maintenance Options</h3>
+                        <p>Agreed updates, backups, and support.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Form -->
+        <section class="section contact-section" id="contact">
+
+            <div class="container contact-grid">
+
+                <div class="contact-info">
+
+                    <span class="eyebrow">Start Your Project</span>
+
+                    <h2>Let's Build Your Website</h2>
+
+                    <p>
+                        Tell us about your project so we can
+                        understand your requirements.
+                    </p>
+
+                    <ul>
+                        <li>✓ Discuss your requirements</li>
+                        <li>✓ Choose website features</li>
+                        <li>✓ Plan development</li>
+                        <li>✓ Discuss the budget</li>
+                    </ul>
+
+                </div>
+
+
+                <form class="contact-form" id="contactForm">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                maxlength="100"
+                                autocomplete="name"
+                                required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="businessName">Business Name</label>
+
+                            <input
+                                type="text"
+                                id="businessName"
+                                name="businessName"
+                                maxlength="150"
+                                autocomplete="organization">
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                maxlength="254"
+                                autocomplete="email"
+                                required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                maxlength="30"
+                                autocomplete="tel">
+                        </div>
+
+
+                        <div class="form-group full-width">
+                            <label for="websiteType">Website Type *</label>
+
+                            <select id="websiteType"
+                                    name="websiteType"
+                                    required>
+
+                                <option value="">Select a service</option>
+
+                                <option>Company & Corporate Websites</option>
+                                <option>Service-Based Business Websites</option>
+                                <option>Education & E-learning Websites</option>
+                                <option>Healthcare & Medical Websites</option>
+                                <option>Real Estate & Property Websites</option>
+                                <option>Travel & Hospitality Websites</option>
+                                <option>Finance & Professional Websites</option>
+                                <option>Business Platforms & Web Applications</option>
+                                <option>Personal Portfolio Website</option>
+                                <option>Blog or News Website</option>
+                                <option>Appointment Booking System</option>
+                                <option>Other Website Project</option>
+
+                            </select>
+                        </div>
+
+
+                        <div class="form-group full-width">
+                            <label for="budget">Estimated Project Budget</label>
+
+                            <select id="budget" name="budget">
+
+                                <option value="">Select your budget</option>
+                                <option>Below ₹10,000</option>
+                                <option>₹10,000 – ₹25,000</option>
+                                <option>₹25,000 – ₹50,000</option>
+                                <option>₹50,000 – ₹1,00,000</option>
+                                <option>Above ₹1,00,000</option>
+                                <option>Not decided yet</option>
+
+                            </select>
+                        </div>
+
+
+                        <div class="form-group full-width">
+                            <label for="features">Required Features</label>
+
+                            <textarea
+                                id="features"
+                                name="features"
+                                maxlength="3000"
+                                placeholder="Describe your website and required features..."></textarea>
+                        </div>
+
+                    </div>
+
+                    <button type="submit"
+                            class="btn btn-primary form-submit">
+                        Submit Project Enquiry →
+                    </button>
+
+                    <p id="formMessage"
+                       class="form-message"
+                       role="status"
+                       aria-live="polite">
+                    </p>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <p>
+                © <span id="currentYear"></span>
+                The Web Development Studios.
+                All rights reserved.
+            </p>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
+                        

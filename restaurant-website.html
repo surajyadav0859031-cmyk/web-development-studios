@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- HTML PART 1/4: Document setup and navigation -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional restaurant website development by The Web Development Studios. Responsive websites, digital menus, online ordering and custom web solutions.">
+    <meta name="theme-color" content="#142D29">
+    <title>Restaurant Website Development | The Web Development Studios</title>
+    <link rel="stylesheet" href="restaurant-website.css">
+    <script src="restaurant-website.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container navbar">
+            <a class="brand" href="index.html" aria-label="The Web Development Studios home">
+                <span class="brand-web">Web</span><span class="brand-rest">Development Studios</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" type="button"
+                    aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service.html" class="active">Services</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="#contact" class="nav-cta">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HTML PART 2/4: Hero, introduction and services -->
+        <section class="hero section">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <span class="eyebrow"><span class="eyebrow-line"></span> RESTAURANT WEBSITE SOLUTIONS</span>
+                    <h1>Digital experiences <span>for restaurants.</span></h1>
+                    <p class="hero-lead">We build elegant, responsive restaurant websites that showcase your menu, strengthen your brand, and help customers discover your business online.</p>
+                    <div class="button-row">
+                        <a class="button button-primary" href="#contact">Start your project <span aria-hidden="true">↗</span></a>
+                        <a class="button button-secondary" href="#services">Explore services</a>
+                    </div>
+                    <div class="hero-points">
+                        <span>✓ Mobile-friendly design</span>
+                        <span>✓ Custom restaurant solutions</span>
+                    </div>
+                </div>
+                <div class="hero-art" aria-label="Illustration of a restaurant website preview">
+                    <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+                    <div class="mockup-card">
+                        <div class="mockup-top"><span class="mockup-brand">YOUR RESTAURANT</span><span class="live-dot"></span></div>
+                        <div class="mockup-mark">✦</div>
+                        <p class="mockup-kicker">A TASTE OF SOMETHING SPECIAL</p>
+                        <h2>Your restaurant.<br><span>Your digital identity.</span></h2>
+                        <p class="mockup-description">A beautiful online destination for your menu, story, and customers.</p>
+                        <div class="mockup-menu">
+                            <div><span>Digital menu</span><b>01</b></div>
+                            <div><span>Table reservations</span><b>02</b></div>
+                            <div><span>Online ordering</span><b>03</b></div>
+                        </div>
+                        <span class="mockup-foot">DESIGNED FOR MODERN RESTAURANTS</span>
+                    </div>
+                    <span class="floating-note note-top">Thoughtful design</span>
+                    <span class="floating-note note-bottom">Responsive by design</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro section">
+            <div class="container intro-grid">
+                <div>
+                    <span class="eyebrow">YOUR BUSINESS ONLINE</span>
+                    <h2 class="section-title">Give your restaurant <span>a stronger digital presence.</span></h2>
+                </div>
+                <div class="intro-copy">
+                    <p>Your website can be the central place where customers explore your food, discover your location, view your menu, and contact your restaurant.</p>
+                    <p>We create tailored website experiences for businesses of different sizes, from independent cafés to multi-location food brands.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="services section" id="services">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">WHAT WE BUILD</span>
+                    <h2 class="section-title">Restaurant website <span>development services.</span></h2>
+                    <p>Choose the services that suit your restaurant's needs and goals.</p>
+                </div>
+                <div class="service-grid">
+                    <article class="service-card"><span class="card-number">01 / SERVICE</span><span class="service-icon">◈</span><h3>Restaurant websites</h3><p>Custom-designed websites that present your restaurant's story, atmosphere, location, and specialties.</p><a href="#contact">Discuss your project <span>↗</span></a></article>
+                    <article class="service-card"><span class="card-number">02 / SERVICE</span><span class="service-icon">▤</span><h3>Digital menu websites</h3><p>Display food categories, descriptions, prices, and photography in a clear, easy-to-browse menu.</p><a href="#contact">Discuss your project <span>↗</span></a></article>
+                    <article class="service-card"><span class="card-number">03 / SERVICE</span><span class="service-icon">⌘</span><h3>Online ordering</h3><p>Create an ordering journey where customers can browse dishes and submit orders online.</p><a href="#contact">Discuss your project <span>↗</span></a></article>
+                    <article class="service-card"><span class="card-number">04 / SERVICE</span><span class="service-icon">▦</span><h3>Responsive design</h3><p>Layouts designed to adapt to smartphones, tablets, laptops, and desktop computers.</p><a href="#contact">Discuss your project <span>↗</span></a></article>
+                    <article class="service-card"><span class="card-number">05 / SERVICE</span><span class="service-icon">◎</span><h3>Reservation inquiries</h3><p>Inquiry forms that let customers request tables and share their preferred booking details.</p><a href="#contact">Discuss your project <span>↗</span></a></article>
+                    <article class="service-card"><span class="card-number">06 / SERVICE</span><span class="service-icon">✧</span><h3>Website maintenance</h3><p>Keep your website current with menu updates, new offers, content improvements, and technical care.</p><a href="#contact">Discuss your project <span>↗</span></a></article>
+                </div>
+            </div>
+        </section>
+
+        <!-- HTML PART 3/4: Features, restaurant types, process and pricing -->
+        <section class="features section">
+            <div class="container features-grid">
+                <div class="features-copy">
+                    <span class="eyebrow">BUILT AROUND YOUR NEEDS</span>
+                    <h2 class="section-title">More than just <span>a beautiful website.</span></h2>
+                    <p>We plan your website around the features your business actually needs. Final functionality depends on your agreed project scope.</p>
+                    <a class="button button-primary" href="#contact">Plan your website <span>↗</span></a>
+                </div>
+                <div class="feature-list">
+                    <article class="feature-item"><span class="check-mark">✓</span><div><h3>Menu presentation</h3><p>Show dishes, categories, prices, descriptions, and food photos.</p></div></article>
+                    <article class="feature-item"><span class="check-mark">✓</span><div><h3>Location and contact</h3><p>Share contact details, opening hours, social links, and directions.</p></div></article>
+                    <article class="feature-item"><span class="check-mark">✓</span><div><h3>Customer inquiries</h3><p>Collect project-specific messages and reservation requests.</p></div></article>
+                    <article class="feature-item"><span class="check-mark">✓</span><div><h3>Search essentials</h3><p>Set up important page metadata and basic on-page SEO.</p></div></article>
+                    <article class="feature-item"><span class="check-mark">✓</span><div><h3>Optional admin dashboard</h3><p>Manage menus or orders when a suitable backend is included.</p></div></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="restaurant-types section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">WHO WE SERVE</span>
+                    <h2 class="section-title">Solutions for every <span>kind of restaurant.</span></h2>
+                    <p>Your website should reflect your restaurant's style, customers, and goals.</p>
+                </div>
+                <div class="type-grid">
+                    <article class="type-card"><span>01 / CAFÉ</span><h3>Cafés and coffee shops</h3><p>A welcoming home for your drinks menu, opening hours, and café story.</p></article>
+                    <article class="type-card"><span>02 / DINING</span><h3>Family restaurants</h3><p>Present your menu, dining experience, location, and customer information.</p></article>
+                    <article class="type-card"><span>03 / PREMIUM</span><h3>Fine dining</h3><p>An elegant digital experience that reflects your restaurant's atmosphere.</p></article>
+                    <article class="type-card"><span>04 / FOOD BUSINESS</span><h3>Cloud kitchens</h3><p>Showcase food offerings and plan a clear online ordering journey.</p></article>
+                    <article class="type-card"><span>05 / LOCAL</span><h3>Local food businesses</h3><p>Help customers discover your menu, location, and contact details.</p></article>
+                    <article class="type-card"><span>06 / MULTI-BRANCH</span><h3>Restaurant chains</h3><p>Organize information for multiple locations and growing food brands.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="process section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">HOW WE WORK</span>
+                    <h2 class="section-title">From idea <span>to online launch.</span></h2>
+                </div>
+                <div class="process-grid">
+                    <article class="process-card"><span>01</span><h3>Discover</h3><p>Understand your restaurant, audience, goals, and required features.</p></article>
+                    <article class="process-card"><span>02</span><h3>Design</h3><p>Plan the layout, colors, menu experience, and visual identity.</p></article>
+                    <article class="process-card"><span>03</span><h3>Develop</h3><p>Build the website and implement the agreed functionality.</p></article>
+                    <article class="process-card"><span>04</span><h3>Test and launch</h3><p>Test key features, publish the site, and hand it over to you.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing section" id="pricing">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">FLEXIBLE PACKAGES</span>
+                    <h2 class="section-title">Choose your <span>restaurant website plan.</span></h2>
+                    <p>Illustrative starting prices. Your final quote depends on features, content, integrations, and complexity.</p>
+                </div>
+                <div class="pricing-grid">
+                    <article class="price-card">
+                        <span class="plan-label">STARTER</span><h3>Essential presence</h3><p class="plan-description">For small restaurants and cafés.</p>
+                        <p class="price">₹4,999 <span>starting price</span></p>
+                        <ul><li>Up to 4 main pages</li><li>Responsive design</li><li>Digital menu display</li><li>Contact information</li><li>Basic SEO setup</li><li>WhatsApp contact link</li></ul>
+                        <a class="button button-secondary full-button" href="#contact" data-package="Starter">Choose Starter</a>
+                    </article>
+                    <article class="price-card price-card-featured">
+                        <span class="popular-label">POPULAR CHOICE</span><span class="plan-label">PROFESSIONAL</span><h3>Business growth</h3><p class="plan-description">For growing restaurants and food businesses.</p>
+                        <p class="price">₹9,999 <span>starting price</span></p>
+                        <ul><li>Up to 7 main pages</li><li>Custom visual design</li><li>Menu categories</li><li>Reservation inquiry form</li><li>Map and social links</li><li>Enhanced SEO setup</li><li>Performance optimization</li></ul>
+                        <a class="button button-primary full-button" href="#contact" data-package="Professional">Choose Professional</a>
+                    </article>
+                    <article class="price-card">
+                        <span class="plan-label">PREMIUM</span><h3>Advanced experience</h3><p class="plan-description">For custom features and more complex needs.</p>
+                        <p class="price">₹19,999 <span>starting price</span></p>
+                        <ul><li>Custom multi-page website</li><li>Advanced menu experience</li><li>Online ordering options</li><li>Custom integrations</li><li>Admin features as scoped</li><li>Backend quoted separately</li><li>Testing and launch support</li></ul>
+                        <a class="button button-secondary full-button" href="#contact" data-package="Premium">Discuss Premium</a>
+                    </article>
+                </div>
+                <p class="pricing-note">Domain, hosting renewals, payment gateway fees, third-party services, and ongoing maintenance may cost extra. Online ordering, dashboards, and payment processing require the relevant implementation and integrations.</p>
+            </div>
+        </section>
+
+        <!-- HTML PART 4/4: Why us, FAQ, contact and footer -->
+        <section class="why-us section">
+            <div class="container why-grid">
+                <div><span class="eyebrow">THE RIGHT DIGITAL PARTNER</span><h2 class="section-title">Built with your <span>business goals in mind.</span></h2><p>We focus on useful digital experiences that reflect your brand and support your business.</p></div>
+                <div class="why-list">
+                    <article><span>01</span><div><h3>Custom approach</h3><p>Design and functionality based on your requirements.</p></div></article>
+                    <article><span>02</span><div><h3>Responsive experience</h3><p>Layouts adapted for different screen sizes.</p></div></article>
+                    <article><span>03</span><div><h3>Clear communication</h3><p>Understand scope, timeline, and deliverables.</p></div></article>
+                    <article><span>04</span><div><h3>Room to grow</h3><p>Plan additional features as your business evolves.</p></div></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq section">
+            <div class="container faq-container">
+                <div class="section-heading"><span class="eyebrow">COMMON QUESTIONS</span><h2 class="section-title">Frequently asked <span>questions.</span></h2></div>
+                <div class="faq-list">
+                    <details class="faq-item"><summary>How long does a restaurant website take?</summary><p>A simple website may take around one to two weeks. Websites with ordering systems, dashboards, or integrations may take longer.</p></details>
+                    <details class="faq-item"><summary>Can customers view my menu on their phones?</summary><p>Yes. We can create a responsive menu experience for smartphones, tablets, and desktop screens.</p></details>
+                    <details class="faq-item"><summary>Can you add online ordering and payments?</summary><p>Yes, subject to project scope. Online ordering and payments need suitable backend functionality and, where applicable, a payment gateway integration.</p></details>
+                    <details class="faq-item"><summary>Can I update my menu later?</summary><p>Menu updates can be handled through developer support or a custom admin dashboard, depending on the solution selected.</p></details>
+                    <details class="faq-item"><summary>Are domain and hosting included?</summary><p>Only if included in your written quotation. Domain registration, hosting, renewals, and third-party services should be agreed before development begins.</p></details>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="container contact-grid">
+                <div class="contact-copy">
+                    <span class="eyebrow">LET'S BUILD SOMETHING</span>
+                    <h2 class="section-title">Ready to bring <span>your restaurant online?</span></h2>
+                    <p>Tell us about your restaurant, the website you need, and the features you want to offer your customers.</p>
+                    <div class="contact-benefit"><span>✦</span><div><h3>Personalized project planning</h3><p>Discuss your goals before choosing a package.</p></div></div>
+                    <div class="contact-benefit"><span>✦</span><div><h3>Flexible requirements</h3><p>Choose the features that fit your business.</p></div></div>
+                </div>
+                <form class="contact-form" id="restaurantContactForm">
+                    <h3>Tell us about your project</h3>
+                    <p class="form-intro">Complete this form to prepare an email inquiry.</p>
+                    <div class="form-row">
+                        <div class="form-group"><label for="customerName">Your name *</label><input id="customerName" name="name" type="text" autocomplete="name" placeholder="Enter your name" required></div>
+                        <div class="form-group"><label for="businessName">Restaurant name *</label><input id="businessName" name="business" type="text" placeholder="Restaurant name" required></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><label for="customerEmail">Email address *</label><input id="customerEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+                        <div class="form-group"><label for="customerPhone">Phone number</label><input id="customerPhone" name="phone" type="tel" autocomplete="tel" placeholder="Contact number"></div>
+                    </div>
+                    <div class="form-group"><label for="restaurantType">Restaurant type *</label><select id="restaurantType" name="restaurantType" required><option value="">Select restaurant type</option><option>Café / Coffee Shop</option><option>Family Restaurant</option><option>Fine Dining</option><option>Cloud Kitchen</option><option>Fast Food</option><option>Restaurant Chain</option><option>Other</option></select></div>
+                    <div class="form-group"><label for="websitePackage">Preferred package</label><select id="websitePackage" name="package"><option value="">Not decided yet</option><option>Starter</option><option>Professional</option><option>Premium</option><option>Custom solution</option></select></div>
+                    <div class="form-group"><label for="projectDetails">Project requirements *</label><textarea id="projectDetails" name="message" rows="5" placeholder="Tell us about your restaurant website..." required></textarea></div>
+                    <div class="honeypot" aria-hidden="true"><label for="websiteAddress">Leave this field empty</label><input id="websiteAddress" name="_gotcha" type="text" tabindex="-1" autocomplete="off"></div>
+                    <button class="button button-primary submit-button" type="submit">Prepare project inquiry <span>↗</span></button>
+                    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                    <p class="form-note">This demo opens your email app with a draft. It does not automatically send or store inquiries.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a class="brand" href="index.html"><span class="brand-web">Web</span><span class="brand-rest">Development Studios</span></a>
+            <p>Building digital experiences for modern businesses.</p>
+            <div class="footer-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="service.html">Services</a><a href="#contact">Contact</a></div>
+            <p class="copyright">© <span id="currentYear"></span> The Web Development Studios. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

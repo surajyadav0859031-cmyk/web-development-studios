@@ -1,0 +1,933 @@
+/* =====================================================
+   THE WEB DEVELOPMENT STUDIOS
+   HOSTING & DEPLOYMENT SERVICE PAGE
+   Colour Theme: Chocolate + Grey + Green + Blue
+===================================================== */
+
+/* =========================
+   1. ROOT VARIABLES
+========================= */
+
+:root {
+    --chocolate: #5D4037;
+    --dark-chocolate: #3E2723;
+
+    --background: #F3F4F6;
+    --grey: #9CA3AF;
+    --text: #374151;
+    --dark: #111827;
+
+    --border: #E5E7EB;
+
+    --green: #22C55E;
+    --green-light: #DCFCE7;
+
+    --blue: #3B82F6;
+    --blue-light: #DBEAFE;
+
+    --white: #FFFFFF;
+
+    --radius: 18px;
+    --shadow: 0 15px 40px rgba(62, 39, 35, 0.08);
+
+    --transition: all 0.3s ease;
+}
+
+
+/* =========================
+   2. GLOBAL RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: min(1180px, 90%);
+    margin: auto;
+}
+
+section {
+    padding: 85px 0;
+}
+
+
+/* =========================
+   3. COMMON HEADINGS
+========================= */
+
+.section-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 50px;
+}
+
+.section-heading span {
+    display: inline-block;
+    color: var(--green);
+    background: var(--green-light);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    color: var(--chocolate);
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.section-heading p {
+    color: var(--text);
+    font-size: 16px;
+}
+
+
+/* =========================
+   4. NAVIGATION
+========================= */
+
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    min-height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    color: var(--dark-chocolate);
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-menu a {
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--blue);
+}
+
+.menu-toggle {
+    display: none;
+    background: var(--blue-light);
+    border: none;
+    color: var(--dark-chocolate);
+    padding: 9px 12px;
+    border-radius: 8px;
+    font-size: 22px;
+}
+
+
+/* =========================
+   5. BUTTONS
+========================= */
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 25px;
+    border-radius: 9px;
+    font-weight: 700;
+    font-size: 14px;
+    border: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--dark-chocolate);
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background: var(--green);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background: var(--chocolate);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    border-color: var(--blue);
+    color: var(--blue);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+
+/* =========================
+   6. HERO SECTION
+========================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        135deg,
+        var(--background),
+        var(--blue-light),
+        var(--white)
+    );
+    padding: 105px 0;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: var(--green-light);
+    border-radius: 50%;
+    top: -120px;
+    right: -80px;
+    opacity: 0.7;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+}
+
+.hero-label {
+    display: inline-block;
+    background: var(--green-light);
+    color: var(--dark-chocolate);
+    padding: 8px 17px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    color: var(--dark-chocolate);
+    font-size: clamp(38px, 6vw, 62px);
+    line-height: 1.12;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: var(--blue);
+}
+
+.hero p {
+    color: var(--text);
+    font-size: 17px;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+/* =========================
+   7. INTRODUCTION
+========================= */
+
+.intro {
+    background: var(--white);
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.intro-content h2 {
+    color: var(--chocolate);
+    font-size: 36px;
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.intro-content p {
+    margin-bottom: 16px;
+}
+
+.intro-image {
+    min-height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        135deg,
+        var(--blue-light),
+        var(--green-light)
+    );
+    border-radius: var(--radius);
+    padding: 35px;
+    color: var(--dark-chocolate);
+    font-size: 70px;
+    box-shadow: var(--shadow);
+}
+
+
+/* =========================
+   8. HOSTING SERVICES
+========================= */
+
+.hosting-services {
+    background: var(--background);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 32px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--blue);
+}
+
+.service-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-light);
+    color: var(--blue);
+    border-radius: 14px;
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+
+.service-card h3 {
+    color: var(--chocolate);
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+
+/* =========================
+   9. DEPLOYMENT SOLUTIONS
+========================= */
+
+.deployment {
+    background: var(--white);
+}
+
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.solution-card {
+    background: var(--background);
+    padding: 30px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.solution-card:hover {
+    transform: translateY(-6px);
+}
+
+.solution-card h3 {
+    color: var(--chocolate);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.solution-card p {
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.solution-card ul li {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.solution-card ul li::before {
+    content: "✓";
+    color: var(--green);
+    font-weight: 800;
+    margin-right: 10px;
+}
+
+.solution-card.featured {
+    background: var(--dark-chocolate);
+    color: var(--white);
+    border-color: var(--dark-chocolate);
+}
+
+.solution-card.featured h3 {
+    color: var(--white);
+}
+
+.solution-card.featured p {
+    color: #E5E7EB;
+}
+
+
+/* =========================
+   10. WHY CHOOSE US
+========================= */
+
+.why-us {
+    background: var(--background);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.why-card {
+    display: flex;
+    gap: 18px;
+    background: var(--white);
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+}
+
+.why-icon {
+    min-width: 48px;
+    height: 48px;
+    background: var(--green-light);
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 22px;
+}
+
+.why-card h3 {
+    color: var(--chocolate);
+    margin-bottom: 7px;
+    font-size: 18px;
+}
+
+.why-card p {
+    font-size: 14px;
+}
+
+
+/* =========================
+   11. DEVELOPMENT PROCESS
+========================= */
+
+.process {
+    background: var(--white);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.process-card {
+    text-align: center;
+    padding: 28px 18px;
+    background: var(--background);
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.process-card:hover {
+    background: var(--blue-light);
+    transform: translateY(-5px);
+}
+
+.process-number {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    background: var(--blue);
+    color: var(--white);
+    border-radius: 50%;
+    font-weight: 800;
+}
+
+.process-card h3 {
+    color: var(--chocolate);
+    margin-bottom: 10px;
+}
+
+.process-card p {
+    font-size: 13px;
+}
+
+
+/* =========================
+   12. SECURITY SECTION
+========================= */
+
+.security {
+    background: var(--background);
+}
+
+.security-box {
+    background: var(--chocolate);
+    color: var(--white);
+    padding: 55px;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.security-box h2 {
+    color: var(--white);
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+.security-box p {
+    color: #E5E7EB;
+}
+
+.security-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.security-list li::before {
+    content: "✓";
+    color: var(--green);
+    font-weight: 800;
+    margin-right: 12px;
+}
+
+
+/* =========================
+   13. FAQ SECTION
+========================= */
+
+.faq {
+    background: var(--white);
+}
+
+.faq-container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.faq-item {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    color: var(--chocolate);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.faq-question span {
+    color: var(--blue);
+    font-size: 22px;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 20px 20px;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-question span {
+    color: var(--green);
+}
+
+
+/* =========================
+   14. CALL TO ACTION
+========================= */
+
+.cta {
+    background: var(--background);
+}
+
+.cta-box {
+    background: var(--blue);
+    color: var(--white);
+    padding: 65px 30px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.cta-box h2 {
+    color: var(--white);
+    font-size: clamp(28px, 4vw, 40px);
+    margin-bottom: 15px;
+}
+
+.cta-box p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #EFF6FF;
+}
+
+.cta-box .btn {
+    background: var(--white);
+    color: var(--dark-chocolate);
+}
+
+.cta-box .btn:hover {
+    background: var(--green);
+    color: var(--white);
+}
+
+
+/* =========================
+   15. FOOTER
+========================= */
+
+.footer {
+    background: var(--dark-chocolate);
+    color: var(--white);
+    padding: 65px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 35px;
+    margin-bottom: 40px;
+}
+
+.footer h3 {
+    color: var(--white);
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+
+.footer p {
+    color: #D1D5DB;
+    font-size: 14px;
+}
+
+.footer ul li {
+    margin: 11px 0;
+}
+
+.footer ul li a {
+    color: #D1D5DB;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.footer ul li a:hover {
+    color: var(--green);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 22px;
+    text-align: center;
+    color: #D1D5DB;
+    font-size: 13px;
+}
+
+
+/* =========================
+   16. SCROLL ANIMATION
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   17. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 992px) {
+
+    .service-grid,
+    .solution-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .intro-grid {
+        gap: 30px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    section {
+        padding: 65px 0;
+    }
+
+    .navbar {
+        min-height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 15px 5%;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu a {
+        display: block;
+        width: 100%;
+        padding: 13px 0;
+    }
+
+    .hero {
+        padding: 75px 0;
+    }
+
+    .intro-grid,
+    .security-box {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-content h2 {
+        font-size: 30px;
+    }
+
+    .security-box {
+        padding: 35px 25px;
+    }
+
+    .security-box h2 {
+        font-size: 28px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .service-grid,
+    .solution-grid,
+    .process-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card,
+    .solution-card {
+        padding: 25px;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .cta-box {
+        padding: 45px 20px;
+    }
+
+    .cta-box h2 {
+        font-size: 28px;
+    }
+}
+
+
+/* =========================
+   18. ACCESSIBILITY
+========================= */
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--green);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
